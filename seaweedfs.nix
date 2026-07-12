@@ -80,11 +80,6 @@ in
                 description = "Memory profile output file";
                 default = null;
               };
-              defaultReplicaPlacement = mkOption {
-                type = types.nullOr types.str;
-                description = "Default replication type";
-                default = null;
-              };
               metricsAddress = mkOption {
                 type = types.nullOr types.str;
                 description = "Prometheus gateway address";
@@ -819,7 +814,6 @@ in
           ++ optNotNull mCfg.garbageThreshold "-garbageThreshold ${toString mCfg.garbageThreshold}"
           ++ optNotNull mCfg.heartbeatInterval "-heartbeatInterval ${toString mCfg.heartbeatInterval}"
           ++ optNotNull mCfg.ip "-ip ${mCfg.ip}"
-          ++ optNotNull mCfg.defaultReplicaPlacement "-defaultReplicaPlacement ${mCfg.defaultReplicaPlacement}"
           ++ optNotNull mCfg.ipBind "-ip.bind ${mCfg.ipBind}"
           ++ optNotNull mCfg.maxParallelVacuumPerServer "-maxParallelVacuumPerServer ${toString mCfg.maxParallelVacuumPerServer}"
           ++ optNotNull mCfg.mdir "-mdir ${mCfg.mdir}"
