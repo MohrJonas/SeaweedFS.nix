@@ -822,7 +822,7 @@ in
           ++ optNotNull mCfg.metricsIntervalSeconds "-metrics.intervalSeconds ${toString mCfg.metricsIntervalSeconds}"
           ++ optNotNull mCfg.metricsIp "-metricsIp ${mCfg.metricsIp}"
           ++ optNotNull mCfg.metricsPort "-metricsPort ${toString mCfg.metricsPort}"
-          ++ optNotNull mCfg.peers "-peers ${join ":" mCfg.peers}"
+          ++ optNotNull mCfg.peers "-peers ${join "," mCfg.peers}"
           ++ optNotNull mCfg.port "-port ${toString mCfg.port}"
           ++ optNotNull mCfg.portGrpc "-port.grpc ${toString mCfg.portGrpc}"
           ++ optNotNull mCfg.raftBootstrap "-raftBootstrap"
